@@ -2,7 +2,7 @@
 
 ### This source is tested on:
 
-Emualtors:
+Emulators:
 * Bluestack
 * LDPlayer
 
