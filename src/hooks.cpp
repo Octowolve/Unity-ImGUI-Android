@@ -58,8 +58,7 @@ namespace hooks {
 			jmethodID get_y = env->GetMethodID(motion_event, ("getY"), ("()F"));
 			jmethodID get_pointer_count = env->GetMethodID(motion_event, ("getPointerCount"), ("()I"));
 
-			ImGui_ImplAndroid_HandleInputEvent(env->CallIntMethod(input_event, get_action),env->CallFloatMethod(input_event, get_x),
-											   env->CallFloatMethod(input_event, get_y), env->CallIntMethod(input_event, get_pointer_count));
+			ImGui_ImplAndroid_HandleInputEvent(env->CallIntMethod(input_event, get_action),env->CallFloatMethod(input_event, get_x), env->CallFloatMethod(input_event, get_y), env->CallIntMethod(input_event, get_pointer_count));
 
 			ImGuiIO &io = ImGui::GetIO();
 			if (io.WantCaptureMouse)
@@ -78,9 +77,7 @@ namespace hooks {
 			jmethodID get_meta_state = env->GetMethodID(key_event, ("getMetaState"), ("()I"));
 
 			ImGuiIO &io = ImGui::GetIO();
-			io.AddInputCharacter(env->CallIntMethod(input_event, get_unicode_char,
-													env->CallIntMethod(input_event,
-																	   get_meta_state)));
+			io.AddInputCharacter(env->CallIntMethod(input_event, get_unicode_char, env->CallIntMethod(input_event, get_meta_state)));
 		}
 		return o_inject_event(env, __this, input_event);
 	}
