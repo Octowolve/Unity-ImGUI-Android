@@ -1,4 +1,8 @@
-you have to add to functions.
+# (ImGUI)[https://github.com/ocornut/imgui]
+
+Add the imgui files here. In this project OpenGLv3 is used so download its corresponding backend files.
+
+You have to add to functions.
 
 
 1. Handle Input
