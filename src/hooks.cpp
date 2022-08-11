@@ -25,7 +25,8 @@ namespace hooks {
 		do {
 			sleep(1);
 		} while (!utils::is_library_loaded(lib_unity));
-
+		
+		//refer to Tutorials/Get nativeInject Event Signature.md to understand this
 		uintptr_t inject_event = utils::find_pattern_in_module(lib_unity, "70 40 2D E9 10 D0 4D E2 02 50 A0 E1 7E CE FF EB");
 		if(inject_event == NULL)
 			return NULL;
