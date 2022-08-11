@@ -63,4 +63,4 @@ You should now be greeted by this.
  
 
 
- You may test this signature with the SigMaker plugin before using it though.
+ You may test this signature with the SigMaker plugin by clicking in the sigmaker view on "Test ida pattern" before using it though.
