@@ -14,5 +14,5 @@ static bool g_initialized = false;
 namespace menu{
     void menu_style();
     void setup_menu();
-    void draw_menu();
+    void draw_menu(int width, int height);
 }
