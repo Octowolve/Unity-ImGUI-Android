@@ -32,15 +32,14 @@ namespace menu{
         LOGI("setup done.");
     }
 
-    void draw_menu(){
+    void draw_menu(int width, int height){
         if(!g_initialized) return;
 
         ImGuiIO &io = ImGui::GetIO();
 
         ImGui_ImplOpenGL3_NewFrame();
 
-        //values should not be hardcoded. 
-        ImGui_ImplAndroid_NewFrame(1600, 900);
+        ImGui_ImplAndroid_NewFrame(width, height);
 
         ImGui::NewFrame();
         ImGui::Begin("Hello, world!"); // Create a window called "Hello, world!" and append into it.
