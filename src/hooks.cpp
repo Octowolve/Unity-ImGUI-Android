@@ -40,8 +40,13 @@ namespace hooks {
 	}
 
 	EGLBoolean swapbuffers::hook(EGLDisplay dpy, EGLSurface surf) {
+		EGLint w, h;
+		eglQuerySurface(dpy, surf, EGL_WIDTH, &w);
+		eglQuerySurface(dpy, surf, EGL_HEIGHT, &h);
+
 		menu::setup_menu();
-		menu::draw_menu();
+		menu::draw_menu(w, h);
+		
 		return o_swapbuffers(dpy, surf);
 	}
 
